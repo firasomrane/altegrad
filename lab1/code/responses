@@ -1,0 +1,19 @@
+Question 1: 
+It is obvious that the density increases by increasing the window size since we will capture more couples of words and so more edges.
+But the fact that the density never reaches 1 even when we use a window that includes all the terms in the document is not true.
+Since there are texts where we can capture all the combinations of the words. For example if we want to have a density of 1 with
+window size of 4 we can just use 4 words that will exist after cleaning the text and then add to it the first 3 words
+Example 'graph text mining density graph text mining' we will get a dinsity of 1 with window = 4 since all combinations are captured.
+
+
+
+Question 2: 
+The time complexity of k core decomposition:
+n = |V|
+m = |E|
+line2: while O(n) // loop over all the vertices
+    line 3: O(n) // get the vertex with the lowest weight
+    
+    line 6 and 7: O(m + n) // O(m) to delete the node and edges and calculate the new degrees
+
+O(n^2 + n*m)
